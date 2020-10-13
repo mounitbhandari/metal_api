@@ -15,15 +15,15 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id('id');
-            $table->string('person_name')->nullable(true);
+            $table->string('user_name')->nullable(true);
             $table->string('email');
 
             $table->string('password');
             $table->rememberToken();
             $table->string('mobile1',15)->nullable(true);
             $table->string('mobile2',15)->nullable(true);
-            $table->bigInteger('person_type_id')->unsigned();
-            $table ->foreign('person_type_id')->references('id')->on('person_types');
+            $table->bigInteger('user_type_id')->unsigned();
+            $table ->foreign('user_type_id')->references('id')->on('user_types');
 
             //Address
             $table->String('address1', 100)->nullable(true);
@@ -35,7 +35,7 @@ class CreateUsersTable extends Migration
             $table->String('pin', 10)->nullable(true);
 
 
-            $table->tinyInteger('inforced')->default(1);
+            $table->tinyInteger('inforce')->default(1);
             $table->timestamps();
         });
 
