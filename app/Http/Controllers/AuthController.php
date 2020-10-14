@@ -58,7 +58,24 @@ class AuthController extends Controller
     {
         return response()->json(auth()->check());
     }
+    public function payload()
+    {
+        $payload = auth()->payload();
 
+        // then you can access the claims directly e.g.
+        $payload = auth()->payload();
+        // $payload->toArray(); // = ['sub' => 123, 'exp' => 123456, 'jti' => 'asfe4fq434asdf'] etc
+        return response()->json($payload->toArray());
+    }
+    public function refresh()
+    {
+        //$newToken = auth()->refresh();
+
+        // Pass true as the first param to force the token to be blacklisted "forever".
+        // The second parameter will reset the claims for the new token
+        $newToken = auth()->refresh(true, true);
+        return response()->json($newToken);
+    }
     public function logout()
     {
         auth()->logout();

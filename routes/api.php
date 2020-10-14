@@ -25,6 +25,9 @@ Route::post('/login', 'AuthController@login');
 Route::get('/me', 'AuthController@me');
 Route::get('/check', 'AuthController@check');
 Route::get('/logout', 'AuthController@logout');
+Route::get('/payloads', 'AuthController@payload');
+Route::get('/refresh', 'AuthController@refresh');
+
 
 
 
