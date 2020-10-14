@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
 
         // user
         User::create(['user_name'=>'Arindam Biswas','mobile1'=>'9836444999','mobile2'=>'','email'=>'arindam','password'=>"81dc9bdb52d04dc20036dbd8313ed055",'user_type_id'=>1]);
-
-
     }
 }
+
+
