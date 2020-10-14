@@ -17,7 +17,6 @@ class AuthController extends Controller
              'email'    => $request->email,
              'password' => $request->password,
              'name' => $request->name,
-
          ]);
 
         $token = auth()->login($user);
@@ -44,7 +43,7 @@ class AuthController extends Controller
         // Get the token
         $token = auth()->login($user);
         $tokenObject = $this->respondWithToken($token);
-        $tempUser = array('id'=>$user->id,'person_name'=>$user->person_name,'person_type_id'=>$user->person_type_id);
+        $tempUser = array('id'=>$user->id,'user_name'=>$user->user_name,'user_type_id'=>$user->user_type_id);
 
         return response()->json(['success'=>1,'token'=>$tokenObject,'user'=>$tempUser,'message'=>'Welcome'], 200);
 
