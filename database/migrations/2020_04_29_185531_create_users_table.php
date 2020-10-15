@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->string('mobile1',15)->nullable(true);
             $table->string('mobile2',15)->nullable(true);
+
             $table->bigInteger('user_type_id')->unsigned();
             $table ->foreign('user_type_id')->references('id')->on('user_types');
 

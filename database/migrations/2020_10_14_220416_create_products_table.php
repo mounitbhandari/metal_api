@@ -16,7 +16,14 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('product_code',20)->nullable(false)->unique();
-            $table->string('product_name',100)->nullable(false)->unique();git
+            $table->string('product_name',100)->nullable(false)->unique();
+
+            $table->bigInteger('product_category_id')->unsigned();
+            $table ->foreign('product_category_id')->references('id')->on('product_categories');
+
+
+            $table->tinyInteger('inforce')->default('1');
+
             $table->timestamps();
         });
     }
