@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Transaction_details;
+use App\Model\TransactionDetail;
 use Illuminate\Http\Request;
 
-class TransactionDetailsController extends Controller
+class TransactionDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class TransactionDetailsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Model\Transaction_details  $transaction_details
+     * @param  \App\Model\TransactionDetail  $transactionDetail
      * @return \Illuminate\Http\Response
      */
-    public function show(Transaction_details $transaction_details)
+    public function show(TransactionDetail $transactionDetail)
     {
         //
     }
@@ -52,10 +52,10 @@ class TransactionDetailsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Model\Transaction_details  $transaction_details
+     * @param  \App\Model\TransactionDetail  $transactionDetail
      * @return \Illuminate\Http\Response
      */
-    public function edit(Transaction_details $transaction_details)
+    public function edit(TransactionDetail $transactionDetail)
     {
         //
     }
@@ -64,10 +64,10 @@ class TransactionDetailsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\Transaction_details  $transaction_details
+     * @param  \App\Model\TransactionDetail  $transactionDetail
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Transaction_details $transaction_details)
+    public function update(Request $request, TransactionDetail $transactionDetail)
     {
         //
     }
@@ -75,10 +75,10 @@ class TransactionDetailsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Model\Transaction_details  $transaction_details
+     * @param  \App\Model\TransactionDetail  $transactionDetail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Transaction_details $transaction_details)
+    public function destroy(TransactionDetail $transactionDetail)
     {
         //
     }

@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model\OrderMaster;
+use App\Model\TransactionDetail;
 use Faker\Generator as Faker;
 
-$factory->define(OrderMaster::class, function (Faker $faker) {
+$factory->define(TransactionDetail::class, function (Faker $faker) {
     return [
         //
     ];

@@ -19,7 +19,7 @@ class CreateSaleMastersTable extends Migration
             $table->decimal('round_off')->default(0);
             $table->decimal('loading_expenditure')->default(0);
             $table->string('comment')->nullable(true);
-            
+
             $table->tinyInteger('inforce')->default(1);
             $table->timestamps();
         });

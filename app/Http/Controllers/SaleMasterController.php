@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Sale_master;
+use App\Model\SaleMaster;
 use Illuminate\Http\Request;
 
 class SaleMasterController extends Controller
@@ -41,10 +41,10 @@ class SaleMasterController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Model\Sale_master  $sale_master
+     * @param  \App\Model\SaleMaster  $saleMaster
      * @return \Illuminate\Http\Response
      */
-    public function show(Sale_master $sale_master)
+    public function show(SaleMaster $saleMaster)
     {
         //
     }
@@ -52,10 +52,10 @@ class SaleMasterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Model\Sale_master  $sale_master
+     * @param  \App\Model\SaleMaster  $saleMaster
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sale_master $sale_master)
+    public function edit(SaleMaster $saleMaster)
     {
         //
     }
@@ -64,10 +64,10 @@ class SaleMasterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\Sale_master  $sale_master
+     * @param  \App\Model\SaleMaster  $saleMaster
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sale_master $sale_master)
+    public function update(Request $request, SaleMaster $saleMaster)
     {
         //
     }
@@ -75,10 +75,10 @@ class SaleMasterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Model\Sale_master  $sale_master
+     * @param  \App\Model\SaleMaster  $saleMaster
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sale_master $sale_master)
+    public function destroy(SaleMaster $saleMaster)
     {
         //
     }

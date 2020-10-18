@@ -4,7 +4,7 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class transaction_type extends Model
+class SaleMaster extends Model
 {
     //
 }

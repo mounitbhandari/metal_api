@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\transaction_type;
+use App\Model\TransactionType;
 use Illuminate\Http\Request;
 
 class TransactionTypeController extends Controller
@@ -41,10 +41,10 @@ class TransactionTypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Model\transaction_type  $transaction_type
+     * @param  \App\Model\TransactionType  $transactionType
      * @return \Illuminate\Http\Response
      */
-    public function show(transaction_type $transaction_type)
+    public function show(TransactionType $transactionType)
     {
         //
     }
@@ -52,10 +52,10 @@ class TransactionTypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Model\transaction_type  $transaction_type
+     * @param  \App\Model\TransactionType  $transactionType
      * @return \Illuminate\Http\Response
      */
-    public function edit(transaction_type $transaction_type)
+    public function edit(TransactionType $transactionType)
     {
         //
     }
@@ -64,10 +64,10 @@ class TransactionTypeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\transaction_type  $transaction_type
+     * @param  \App\Model\TransactionType  $transactionType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, transaction_type $transaction_type)
+    public function update(Request $request, TransactionType $transactionType)
     {
         //
     }
@@ -75,10 +75,10 @@ class TransactionTypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Model\transaction_type  $transaction_type
+     * @param  \App\Model\TransactionType  $transactionType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(transaction_type $transaction_type)
+    public function destroy(TransactionType $transactionType)
     {
         //
     }

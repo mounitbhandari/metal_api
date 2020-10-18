@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\purchase_master;
+use App\Model\PurchaseMaster;
 use Illuminate\Http\Request;
 
 class PurchaseMasterController extends Controller
@@ -41,10 +41,10 @@ class PurchaseMasterController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Model\purchase_master  $purchase_master
+     * @param  \App\Model\PurchaseMaster  $purchaseMaster
      * @return \Illuminate\Http\Response
      */
-    public function show(purchase_master $purchase_master)
+    public function show(PurchaseMaster $purchaseMaster)
     {
         //
     }
@@ -52,10 +52,10 @@ class PurchaseMasterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Model\purchase_master  $purchase_master
+     * @param  \App\Model\PurchaseMaster  $purchaseMaster
      * @return \Illuminate\Http\Response
      */
-    public function edit(purchase_master $purchase_master)
+    public function edit(PurchaseMaster $purchaseMaster)
     {
         //
     }
@@ -64,10 +64,10 @@ class PurchaseMasterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\purchase_master  $purchase_master
+     * @param  \App\Model\PurchaseMaster  $purchaseMaster
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, purchase_master $purchase_master)
+    public function update(Request $request, PurchaseMaster $purchaseMaster)
     {
         //
     }
@@ -75,10 +75,10 @@ class PurchaseMasterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Model\purchase_master  $purchase_master
+     * @param  \App\Model\PurchaseMaster  $purchaseMaster
      * @return \Illuminate\Http\Response
      */
-    public function destroy(purchase_master $purchase_master)
+    public function destroy(PurchaseMaster $purchaseMaster)
     {
         //
     }

@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model\Purchase_detail;
+use App\Model\PurchaseDetail;
 use Faker\Generator as Faker;
 
-$factory->define(Purchase_detail::class, function (Faker $faker) {
+$factory->define(PurchaseDetail::class, function (Faker $faker) {
     return [
         //
     ];

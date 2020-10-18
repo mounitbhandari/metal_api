@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Transaction_master;
+use App\Model\TransactionMaster;
 use Illuminate\Http\Request;
 
 class TransactionMasterController extends Controller
@@ -41,10 +41,10 @@ class TransactionMasterController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Model\Transaction_master  $transaction_master
+     * @param  \App\Model\TransactionMaster  $transactionMaster
      * @return \Illuminate\Http\Response
      */
-    public function show(Transaction_master $transaction_master)
+    public function show(TransactionMaster $transactionMaster)
     {
         //
     }
@@ -52,10 +52,10 @@ class TransactionMasterController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Model\Transaction_master  $transaction_master
+     * @param  \App\Model\TransactionMaster  $transactionMaster
      * @return \Illuminate\Http\Response
      */
-    public function edit(Transaction_master $transaction_master)
+    public function edit(TransactionMaster $transactionMaster)
     {
         //
     }
@@ -64,10 +64,10 @@ class TransactionMasterController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\Transaction_master  $transaction_master
+     * @param  \App\Model\TransactionMaster  $transactionMaster
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Transaction_master $transaction_master)
+    public function update(Request $request, TransactionMaster $transactionMaster)
     {
         //
     }
@@ -75,10 +75,10 @@ class TransactionMasterController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Model\Transaction_master  $transaction_master
+     * @param  \App\Model\TransactionMaster  $transactionMaster
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Transaction_master $transaction_master)
+    public function destroy(TransactionMaster $transactionMaster)
     {
         //
     }

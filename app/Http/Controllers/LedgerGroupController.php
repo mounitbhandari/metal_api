@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\ledger_group;
+use App\Model\LedgerGroup;
 use Illuminate\Http\Request;
 
 class LedgerGroupController extends Controller
@@ -41,10 +41,10 @@ class LedgerGroupController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Model\ledger_group  $ledger_group
+     * @param  \App\Model\LedgerGroup  $ledgerGroup
      * @return \Illuminate\Http\Response
      */
-    public function show(ledger_group $ledger_group)
+    public function show(LedgerGroup $ledgerGroup)
     {
         //
     }
@@ -52,10 +52,10 @@ class LedgerGroupController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Model\ledger_group  $ledger_group
+     * @param  \App\Model\LedgerGroup  $ledgerGroup
      * @return \Illuminate\Http\Response
      */
-    public function edit(ledger_group $ledger_group)
+    public function edit(LedgerGroup $ledgerGroup)
     {
         //
     }
@@ -64,10 +64,10 @@ class LedgerGroupController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\ledger_group  $ledger_group
+     * @param  \App\Model\LedgerGroup  $ledgerGroup
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ledger_group $ledger_group)
+    public function update(Request $request, LedgerGroup $ledgerGroup)
     {
         //
     }
@@ -75,10 +75,10 @@ class LedgerGroupController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Model\ledger_group  $ledger_group
+     * @param  \App\Model\LedgerGroup  $ledgerGroup
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ledger_group $ledger_group)
+    public function destroy(LedgerGroup $ledgerGroup)
     {
         //
     }

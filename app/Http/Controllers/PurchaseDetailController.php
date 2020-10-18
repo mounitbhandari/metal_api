@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Purchase_detail;
+use App\Model\PurchaseDetail;
 use Illuminate\Http\Request;
 
 class PurchaseDetailController extends Controller
@@ -41,10 +41,10 @@ class PurchaseDetailController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Model\Purchase_detail  $purchase_detail
+     * @param  \App\Model\PurchaseDetail  $purchaseDetail
      * @return \Illuminate\Http\Response
      */
-    public function show(Purchase_detail $purchase_detail)
+    public function show(PurchaseDetail $purchaseDetail)
     {
         //
     }
@@ -52,10 +52,10 @@ class PurchaseDetailController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Model\Purchase_detail  $purchase_detail
+     * @param  \App\Model\PurchaseDetail  $purchaseDetail
      * @return \Illuminate\Http\Response
      */
-    public function edit(Purchase_detail $purchase_detail)
+    public function edit(PurchaseDetail $purchaseDetail)
     {
         //
     }
@@ -64,10 +64,10 @@ class PurchaseDetailController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\Purchase_detail  $purchase_detail
+     * @param  \App\Model\PurchaseDetail  $purchaseDetail
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Purchase_detail $purchase_detail)
+    public function update(Request $request, PurchaseDetail $purchaseDetail)
     {
         //
     }
@@ -75,10 +75,10 @@ class PurchaseDetailController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Model\Purchase_detail  $purchase_detail
+     * @param  \App\Model\PurchaseDetail  $purchaseDetail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Purchase_detail $purchase_detail)
+    public function destroy(PurchaseDetail $purchaseDetail)
     {
         //
     }

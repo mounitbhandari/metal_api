@@ -31,6 +31,7 @@ class CreateSaleDetailsTable extends Migration
 
             $table->tinyInteger('inforce')->default(1);
             $table->timestamps();
+
         });
     }
 

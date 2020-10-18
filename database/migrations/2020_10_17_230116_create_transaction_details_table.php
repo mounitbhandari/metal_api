@@ -17,13 +17,13 @@ class CreateTransactionDetailsTable extends Migration
             $table->id();
 
             $table->bigInteger('transaction_master_id')->unsigned();
-            $table->foreign('transaction_master_id')->reference('id')->on('transaction_details');
+            $table->foreign('transaction_master_id')->references('id')->on('transaction_masters');
 
             $table->bigInteger('transaction_type_id')->unsigned();
-            $table->foreign('transaction_type_id')->reference('id')->on('transaction_types');
+            $table->foreign('transaction_type_id')->references('id')->on('transaction_types');
 
             $table->bigInteger('ledger_id')->unsigned();
-            $table->foreign('ledger_id')->reference('id')->on('ledgers');
+            $table->foreign('ledger_id')->references('id')->on('ledgers');
 
             $table->tinyInteger('inforce')->default(1);
             $table->timestamps();

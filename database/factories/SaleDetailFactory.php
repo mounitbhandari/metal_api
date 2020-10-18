@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model\Sale_detail;
+use App\Model\SaleDetail;
 use Faker\Generator as Faker;
 
-$factory->define(Sale_detail::class, function (Faker $faker) {
+$factory->define(SaleDetail::class, function (Faker $faker) {
     return [
         //
     ];
