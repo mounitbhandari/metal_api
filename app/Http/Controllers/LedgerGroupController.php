@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\LedgerGroup;
 use Illuminate\Http\Request;
 
+
 class LedgerGroupController extends Controller
 {
     /**
@@ -14,7 +15,15 @@ class LedgerGroupController extends Controller
      */
     public function index()
     {
-        //
+        $record=LedgerGroup::get();
+        return response()->json(['success'=>1,'data'=>$record], 200,[],JSON_NUMERIC_CHECK);
+    }
+
+    public function getLedgerGroupById($id)
+    {
+        $record=LedgerGroup::where('id',$id)->first();
+        return response()->json(['success'=>1,'data'=>$record], 200,[],JSON_NUMERIC_CHECK);
+
     }
 
     /**
@@ -24,7 +33,7 @@ class LedgerGroupController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +44,10 @@ class LedgerGroupController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ledgerGroup = new LedgerGroup();
+        $ledgerGroup->ledger_group_name=$request->ledger_group_name;
+        $ledgerGroup->save();
+        return response()->json(['success'=>1,'data'=>$ledgerGroup], 200,[],JSON_NUMERIC_CHECK);
     }
 
     /**

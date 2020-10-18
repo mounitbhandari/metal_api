@@ -1,4 +1,4 @@
-<?php
+~<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -8,7 +8,7 @@ class CreateTransactionDetailsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
+     *~
      * @return void
      */
     public function up()
