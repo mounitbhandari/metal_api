@@ -39,6 +39,12 @@ Route::delete('/ledgerGroups/{id}','LedgerGroupController@delete');
 
 
 
+// Product
+Route::get('/products','ProductController@index');
+Route::post('/products','ProductController@store');
+Route::patch('/products','ProductController@update');
+Route::patch('/products/{id}','ProductController@updateById');
+
 Route::group(array('prefix' => 'dev'), function() {
 
 

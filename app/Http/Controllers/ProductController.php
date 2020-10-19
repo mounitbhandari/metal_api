@@ -14,7 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+       $record=Product::get();
+       return response()->json(['success'=>1,'data'=>$record], 200,[],JSON_NUMERIC_CHECK);
+
     }
 
     /**
@@ -35,7 +37,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product= new Product();
+        $product -> product_code= $request->product_code;
+        $product -> product_name= $request->product_name;
+        $product -> product_category_id= $request->product_category_id;
+        $product -> save();
+        return response()->json(['success'=>1,'data'=>$product], 200,[],JSON_NUMERIC_CHECK);
+
     }
 
     /**
@@ -67,9 +75,23 @@ class ProductController extends Controller
      * @param  \App\Model\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request)
     {
-        //
+        $product = new Product();
+        $product=Product::findOrFail($request->input('id'));
+        $product->product_code = $request->input('product_code');
+        $product->product_name =$request->input('product_name');
+        $product->update();
+        return response()->json(['success'=>1,'data'=>$product], 200,[],JSON_NUMERIC_CHECK);
+    }
+    public function updateById(Request $request, $id)
+    {
+        $product = new Product();
+        $product=Product::findOrFail($id);
+        $product->product_code = $request->input('product_code');
+        $product->product_name =$request->input('product_name');
+        $product->update();
+        return response()->json(['success'=>1,'data'=>$product], 200,[],JSON_NUMERIC_CHECK);
     }
 
     /**
