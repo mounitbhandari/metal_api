@@ -49,39 +49,13 @@ class LedgerGroupController extends Controller
         $ledgerGroup->save();
         return response()->json(['success'=>1,'data'=>$ledgerGroup], 200,[],JSON_NUMERIC_CHECK);
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Model\LedgerGroup  $ledgerGroup
-     * @return \Illuminate\Http\Response
-     */
-    public function show(LedgerGroup $ledgerGroup)
+    public function update(Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Model\LedgerGroup  $ledgerGroup
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(LedgerGroup $ledgerGroup)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Model\LedgerGroup  $ledgerGroup
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, LedgerGroup $ledgerGroup)
-    {
-        //
+        $ledgerGroup = new LedgerGroup();
+        $ledgerGroup=LedgerGroup::find($request->input('id'));
+        $ledgerGroup->ledger_group_name = $request->input('ledger_group_name');
+        $ledgerGroup->update();
+        return response()->json(['success'=>1,'data'=>$ledgerGroup], 200,[],JSON_NUMERIC_CHECK);
     }
 
     /**
