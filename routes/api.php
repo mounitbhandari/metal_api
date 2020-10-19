@@ -34,6 +34,8 @@ Route::get('/ledgerGroups','LedgerGroupController@index');
 Route::get('/ledgerGroups/{id}','LedgerGroupController@getLedgerGroupById');
 Route::post('/ledgerGroups','LedgerGroupController@store');
 Route::patch('/ledgerGroups','LedgerGroupController@update');
+Route::patch('/ledgerGroups/{id}','LedgerGroupController@updateById');
+Route::delete('/ledgerGroups/{id}','LedgerGroupController@delete');
 
 
 

@@ -8,11 +8,6 @@ use Illuminate\Http\Request;
 
 class LedgerGroupController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $record=LedgerGroup::get();
@@ -26,22 +21,6 @@ class LedgerGroupController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $ledgerGroup = new LedgerGroup();
@@ -57,15 +36,19 @@ class LedgerGroupController extends Controller
         $ledgerGroup->update();
         return response()->json(['success'=>1,'data'=>$ledgerGroup], 200,[],JSON_NUMERIC_CHECK);
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Model\LedgerGroup  $ledgerGroup
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(LedgerGroup $ledgerGroup)
+    public function updateById(Request $request,$id)
     {
-        //
+        $ledgerGroup = new LedgerGroup();
+        $ledgerGroup=LedgerGroup::find($id);
+        $ledgerGroup->ledger_group_name = $request->input('ledger_group_name');
+        $ledgerGroup->update();
+        return response()->json(['success'=>1,'data'=>$ledgerGroup], 200,[],JSON_NUMERIC_CHECK);
+    }
+
+    public function delete($id)
+    {
+        $ledgerGroup=LedgerGroup::find($id);
+        $result=$ledgerGroup->delete();
+        return response()->json(['success'=>$result,'id'=>$id], 200);
     }
 }
