@@ -14,8 +14,17 @@ class ProductCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $record=ProductCategory::get();
+        return response()->json(['success'=>1,'data'=>$record], 200,[],JSON_NUMERIC_CHECK);
     }
+
+
+    public function getProductCategoryById($id)
+    {
+        $record=ProductCategory::where('id',$id)->first();
+        return response()->json(['success'=>1,'data'=>$record], 200,[],JSON_NUMERIC_CHECK);
+    }
+
 
     /**
      * Show the form for creating a new resource.
@@ -35,7 +44,11 @@ class ProductCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $productCategory= new ProductCategory();
+        $productCategory -> category_name= $request->category_name;
+        $productCategory ->save();
+        return response()->json(['success'=>1,'data'=>$productCategory], 200,[],JSON_NUMERIC_CHECK);
+
     }
 
     /**
@@ -67,9 +80,15 @@ class ProductCategoryController extends Controller
      * @param  \App\Model\ProductCategory  $productCategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ProductCategory $productCategory)
+    public function update(Request $request)
     {
-        //
+        $productCategory= new ProductCategory();
+        $productCategory= ProductCategory::findOrFail($request->input('id'));
+        $productCategory-> category_name= $request->input('category_name');
+        $productCategory->update();
+        return response()->json(['success'=>1,'data'=>$productCategory], 200,[],JSON_NUMERIC_CHECK);
+
+
     }
 
     /**

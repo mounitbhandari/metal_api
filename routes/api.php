@@ -41,9 +41,22 @@ Route::delete('/ledgerGroups/{id}','LedgerGroupController@delete');
 
 // Product
 Route::get('/products','ProductController@index');
+Route::get('/products/{id}','ProductController@getProductById');
 Route::post('/products','ProductController@store');
 Route::patch('/products','ProductController@update');
 Route::patch('/products/{id}','ProductController@updateById');
+Route::delete('/products/{id}','ProductController@delete');
+
+
+
+//ProductCategory
+Route::get('/productCategories','ProductCategoryController@index');
+Route::get('/productCategories/{id}','ProductCategoryController@getProductCategoryById');
+Route::post('/productCategories','ProductCategoryController@store');
+Route::patch('/productCategories','ProductCategoryController@update');
+
+
+
 
 Route::group(array('prefix' => 'dev'), function() {
 
@@ -80,6 +93,7 @@ Route::group(['middleware' => ['jwt.auth']], function() {
     Route::get('/expenditureLedgersTotal/{year}/{month}', 'TransactionController@get_expenditure_ledgers_group_total_by_year_n_month');
 
     Route::post('/ledgers', 'LedgerController@create');
+
 
     Route::get('/cashBook', 'TransactionController@getCashBook');
 

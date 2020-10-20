@@ -18,6 +18,12 @@ class ProductController extends Controller
        return response()->json(['success'=>1,'data'=>$record], 200,[],JSON_NUMERIC_CHECK);
 
     }
+    public function getProductById($id)
+    {
+        $record=Product::where('id',$id)->first();
+        return response()->json(['success'=>1,'data'=>$record], 200,[],JSON_NUMERIC_CHECK);
+
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -100,8 +106,11 @@ class ProductController extends Controller
      * @param  \App\Model\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function delete($id)
     {
-        //
+        $product= Product::findOrFail($id);
+        $result=$product->delete();
+        return response()->json(['success'=>$result,'id'=>$id], 200);
+
     }
 }
