@@ -25,11 +25,12 @@ class ProductController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function getProductsByProductCategoryId($id){
+        $record=Product::where('product_category_id',$id)->get();
+        return response()->json(['success'=>1,'data'=>$record], 200,[],JSON_NUMERIC_CHECK);
+    }
+
+
     public function create()
     {
         //

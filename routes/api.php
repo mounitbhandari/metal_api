@@ -42,6 +42,7 @@ Route::delete('/ledgerGroups/{id}','LedgerGroupController@delete');
 // Product
 Route::get('/products','ProductController@index');
 Route::get('/products/{id}','ProductController@getProductById');
+Route::get('/products/category/{id}','ProductController@getProductsByProductCategoryId');
 Route::post('/products','ProductController@store');
 Route::patch('/products','ProductController@update');
 Route::patch('/products/{id}','ProductController@updateById');
@@ -54,6 +55,12 @@ Route::get('/productCategories','ProductCategoryController@index');
 Route::get('/productCategories/{id}','ProductCategoryController@getProductCategoryById');
 Route::post('/productCategories','ProductCategoryController@store');
 Route::patch('/productCategories','ProductCategoryController@update');
+Route::delete('/productCategories/{id}','ProductCategoryController@delete');
+
+
+Route::get('/productCategories/{id}/isDeleteable','ProductCategoryController@isDeletable');
+
+
 
 
 
